@@ -1,0 +1,349 @@
+body {
+    background-color: #20232c;
+}
+
+* {
+    font-family: arial;
+}
+
+.grid_place {
+    color: #f2ffff;
+}
+
+.contacts {
+    color: black;
+}
+
+header {
+    background-color:#0b0c0f;
+    text-align: center;
+    color: rgb(212, 212, 212);
+    max-width: 100%;
+    max-height:100%;
+}
+
+.texture_type {
+    display:inline-block;
+    background-color: royalblue; 
+    color:white; 
+    margin:5px;
+    border-radius: 10px;
+}
+
+
+@media (min-width: 1200px) {
+    .grid_place{
+        display: grid;     
+        width: 100%;
+        grid-template-columns: repeat(4, 1fr); 
+        grid-template-rows: repeat(3, 1fr); 
+        justify-items: center;
+    }
+
+    .button_style {
+        width:25px;
+        height:10px;
+    }
+
+    .download {
+        width: 100px;
+        height: 35px;
+        margin-left:15px;
+        margin-top:-50px;
+        color: white;
+    }
+
+    .logo-img {
+        height:175px;
+        width:175px;
+    }
+
+    header {
+        height:275px;
+    }
+    .filter{
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-area: 1 / 4 / 4;
+        margin: 20px;
+        height: 870px;
+        width: 300px; 
+        background-color: #181a20;
+
+    }
+    .texture_card{
+        margin: 20px;
+        height: 275px;
+        width: 350px; 
+        background-color: #31343b;
+
+    }
+    img{
+        padding: 10px;
+        width: 240px;
+        height: 140px;
+    }
+    .image_area{
+        display: flex;
+    }
+
+    p {
+        display:block;
+    }
+
+    .credit_price{
+        border-top: 2px solid rgb(192, 192, 192);
+    }
+    .credit_price p{
+        padding: 0px 0px 10px 10px;
+    }
+    .contacts{
+        display: block;
+        color:rgb(192, 192, 192);
+        text-align:  center;
+    }
+    .contacts a {
+        color:rgb(170, 170, 170)
+    }
+    input[type="button"]{
+        padding: 20px;
+        color: white;
+        width: 200px;
+        margin: 10px;
+        border: 1px solid gray;
+        cursor: pointer;
+        background-color: #20232c;
+        font-size: 20px;
+    }
+    
+    input[type="range"]{
+        width: 200px;
+        height: 5px;
+        -webkit-appearance: none;
+        background-color: #31343b;
+    }
+    .credits {
+        font-size: 20px;
+        text-align: center;
+    }
+    .credit_range {
+        text-align: center;
+    }
+    .credits_to_company {
+        text-align: center;
+        color:rgb(146, 146, 146);
+    }
+    .credits_to_company a{
+        color:rgb(219, 219, 219);
+        text-decoration: none;
+    }
+
+}
+
+
+@media (min-width: 730px) and (max-width: 1199.99px) {
+    
+    .credit_price , .range{
+        display: none;
+    }
+    .grid_place{
+        display: grid; 
+        gap:10px;
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: 250px 1fr 1fr 1fr 1fr; 
+    }
+    .image img{
+        display: block;
+        margin: 0 auto;
+        padding: 10px;
+        width: 80%;
+        height: 80%;   
+    }
+    .image p{
+        margin: 0px;
+    }
+    
+    .logo-img {
+        max-width: 100%;
+        max-height:100%;
+    }
+    .logo-img img{    
+        height:100px;
+        width:100px;
+    }
+
+    header {
+        padding-top: 20px;
+        height:310px; 
+    }
+
+    .filter{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        justify-self: center;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin: 20px;     
+        height: 100px;
+        flex-flow:wrap;
+    }
+    .texture_card{
+        width: 100%; 
+        height:100%;
+        background-color: #31343b;
+    }
+
+    input[type="button"]{
+        color: white;
+        padding: 20px;
+        width: 320px;
+        height: 90px;
+        margin: 10px;
+        border: 1px solid gray;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 30px;
+        background-color: #20232c;
+    }
+    .image_area {
+        max-width: 100%;
+        max-height:100%;
+        height: 350px;
+        padding:10px;
+    }
+
+    .image_area img {
+        width: 100%;
+        height: 250px;
+    }
+    .credits_to_company {
+        text-align: center;
+        color:rgb(146, 146, 146);
+    }
+    .credits_to_company a{
+        color:rgb(219, 219, 219);
+        text-decoration: none;
+    }
+
+}
+
+@media (min-width: 375px) and (max-width: 729.99px) {
+    .credit_price, .range{
+        display: none;
+    }
+    .grid_place{
+        gap:15px;
+        display: flex;
+        flex-direction: column;
+        margin-left:20px;
+    }
+    .image img{
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;   
+    }
+    .image_area p{
+        display: none;
+    }
+    
+    .image_area {
+        width:100%;
+        height: 100%;
+        text-align: center;
+    }
+
+    .image_area img {
+        width:400px;
+        height: 400px;
+    }
+
+    input[type="button"]{
+        width: 150px;
+        height: 50px;
+        margin: 10px;
+        border: 1px solid gray;
+        cursor: pointer;
+        font-size: 15px;
+        background-color: #20232c;
+        color:white;
+    }
+    .credits_to_company {
+        text-align: center;
+        color:rgb(146, 146, 146);
+    }
+    .credits_to_company a{
+        color:rgb(219, 219, 219);
+        text-decoration: none;
+    }
+    /*
+    .description, .range{
+        display: none;
+    }
+    .border{
+        display: flex;
+        flex-direction: column;
+    }
+    .image img{
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;   
+    }
+    .image_area p{
+        display: none;
+    }
+
+    .credit_price {
+        display:none;
+    }
+    
+    .image_area {
+        width:100%;
+        height:100%
+    }
+
+    .image_area img {
+        width:350px;
+        height:350px;
+    }
+
+    .grid_place{
+        display: flex;
+        flex-wrap: wrap;
+        gap:10px;
+        margin: 10px;
+        height: 150px;
+        width: 100%; 
+        border-radius: 3%;
+    }
+    input[type="button"]{
+        padding: 20px;
+        width: 150px;
+        height: 30px;
+        margin: 10px;
+        border: 1px solid gray;
+        cursor: pointer;
+        font-size: 15px;
+        background-color:#31343b;
+        color:white;
+    }
+   .credits_to_company {
+        text-align: center;
+        color:rgb(146, 146, 146);
+    }
+    .credits_to_company a{
+        color:rgb(219, 219, 219);
+        text-decoration: none;
+    }
+*/
+}
+
+header img{
+    display: block;
+    margin: 0 auto;
+}
